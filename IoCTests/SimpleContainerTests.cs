@@ -102,6 +102,14 @@ namespace IoC
             X x = container.Resolve<X>();
             Assert.AreEqual("Ala ma kota", x.s);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(AmbiguousConstructorsException))]
+        public void ShouldThrowExceptionForMultiplpeConstructorsWithEqualParametersQuantity()
+        {
+            SimpleContainer container = new SimpleContainer();
+            Z z = container.Resolve<Z>();
+        }
     }
 
     public class Foo { }
@@ -178,5 +186,29 @@ namespace IoC
         }
     }
 
-    public class Y { }
+    public class Y { }
+
+    public class Z
+    {
+        public Y y;
+        public string s;
+
+        public Z() { }
+
+        public Z(Y y)
+        {
+            this.y = y;
+        }
+
+        public Z(string s)
+        {
+            this.s = s;
+        }
+
+        public Z(Y y, string s)
+        {
+            this.y = y;
+            this.s = s;
+        }
+    }
 }

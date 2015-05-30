@@ -29,13 +29,16 @@ namespace IoC
                 return buildInstance<T>(dependencyConstructor, type);
 
             SortByParametersQuantity(constructors);
-            foreach (ConstructorInfo constructor in constructors)
+            for (int i = 0; i < constructors.Length; i++)
             {
+                if (i + 1 < constructors.Length &&
+                        constructors[i].GetParameters().Length == constructors[i + 1].GetParameters().Length)
+                    throw new AmbiguousConstructorsException();
                 try
                 {
-                    return buildInstance<T>(constructor, type);
+                    return buildInstance<T>(constructors[i], type);
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     continue;
                 }
