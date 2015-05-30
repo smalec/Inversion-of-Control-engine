@@ -1,0 +1,7 @@
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1Tests\bin\Debug\Zad1Tests.dll
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1Tests\bin\Debug\Zad1Tests.pdb
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1Tests\bin\Debug\Zad1.exe
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1Tests\bin\Debug\Zad1.pdb
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1Tests\obj\Debug\Zad1Tests.csprojResolveAssemblyReference.cache
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1Tests\obj\Debug\Zad1Tests.dll
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1Tests\obj\Debug\Zad1Tests.pdb

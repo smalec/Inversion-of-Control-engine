@@ -1,0 +1,6 @@
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1\bin\Debug\Zad1.exe.config
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1\bin\Debug\Zad1.exe
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1\bin\Debug\Zad1.pdb
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1\obj\Debug\Zad1.csprojResolveAssemblyReference.cache
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1\obj\Debug\Zad1.exe
+D:\Dokumenty\C#\POO\Lista 9\Lista 9\Zad1\obj\Debug\Zad1.pdb
