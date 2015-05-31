@@ -103,10 +103,29 @@ namespace IoC
             return resolvedParameters;
         }
 
+        public T ResolveProperties<T>(T instance)
+        {
+            IEnumerable<PropertyInfo> properties = 
+                        instance.GetType()
+                                .GetProperties()
+                                .Where(property => Attribute.IsDefined(property, typeof(DependencyProperty)));
+
+            foreach (PropertyInfo property in properties)
+            {
+                property.SetValue(instance, typeof(SimpleContainer)
+                                            .GetMethod("Resolve")
+                                            .MakeGenericMethod(property.PropertyType)
+                                            .Invoke(this, null));
+            }
+
+            return instance;
+        }
+
         private T buildInstance<T>(ConstructorInfo constructor, Type type)
         {
             object[] parameters = ResolveParameters(constructor);
-            return (T)Activator.CreateInstance(type, parameters);
+            T instance = (T) Activator.CreateInstance(type, parameters);
+            return ResolveProperties<T>(instance);
         }
 
         private IDictionary<Type, object> _registeredInstances;

@@ -110,6 +110,14 @@ namespace IoC
             SimpleContainer container = new SimpleContainer();
             Z z = container.Resolve<Z>();
         }
+
+        [TestMethod]
+        public void ShouldResolveDependencyPropertyAttribute()
+        {
+            SimpleContainer container = new SimpleContainer();
+            E e = container.Resolve<E>();
+            Assert.IsNotNull(e.theY);
+        }
     }
 
     public class Foo { }
@@ -174,6 +182,12 @@ namespace IoC
             this.b = b;
             this.foo = f;
         }
+    }    public class E
+    {
+        public E(B b) { }
+
+        [DependencyProperty]
+        public Y theY { get; set; }
     }    public class X
     {
         public Y y;

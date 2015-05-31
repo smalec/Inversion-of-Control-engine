@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\DependencyConstructor.cs" />
+    <Compile Include="Attributes\DependencyProperty.cs" />
     <Compile Include="Exceptions\AmbiguousConstructorsException.cs" />
     <Compile Include="Exceptions\NotRegisteredImplementationException.cs" />
     <Compile Include="Exceptions\TooManyDependencyConstructorsAttrException.cs" />
